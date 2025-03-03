@@ -12,7 +12,7 @@ st.set_page_config(page_title="AI Travel Planner", page_icon="✈️", layout="w
 st.title("🌍 AI-Powered Travel Planner ✈️")
 st.write("Plan your trip with cost estimates, travel details, and food recommendations!")
 
-# User inputs with interactivity
+
 col1, col2 = st.columns(2)
 with col1:
     source = st.text_input("📍 Enter Source Location:", help="Start typing and select a location")
@@ -29,7 +29,7 @@ if st.button("🛫 Plan My Trip"):
         with st.spinner("🔄 Fetching travel options and food recommendations...."):
             time.sleep(2)  # Simulating loading time
 
-            # Generate AI response
+   
             chat_template = ChatPromptTemplate(messages=[
                 ("system", """You are an AI-Powered Travel Planner. Provide travel options (bike, cab, bus, train, flight)
                 including estimated cost, travel time, distance, and food recommendations along the way."""),
@@ -54,13 +54,13 @@ if st.button("🛫 Plan My Trip"):
             }
             response = chain.invoke(raw_input)
             
-            # Display travel options in an interactive card format
+          
             st.success("✅ Travel Options:")
             travel_modes = response.split("\n")
             for mode in travel_modes:
                 with st.expander(f"📌 {mode.split(':')[0]}"):
                     st.markdown(mode)
-                    st.progress(random.uniform(0.5, 1))  # Simulating real-time fetching
+                    st.progress(random.uniform(0.5, 1)) 
 
             # Food recommendations section
             st.subheader("🍔 Recommended Food on the Route")
