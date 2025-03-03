@@ -9,7 +9,7 @@ import random
 GEMINI_API_KEY = "AIzaSyDPqddRi-U9PM2p2ZIPappjnwVtjNSZDoM"
 
 st.set_page_config(page_title="AI Travel Planner", page_icon="✈️", layout="wide")
-st.title("🌍 AI-Powered Travel Planner ✈️")
+st.title("🌍 AI Travel Planner ✈️")
 st.write("Plan your trip with cost estimates, travel details, and food recommendations!")
 
 
