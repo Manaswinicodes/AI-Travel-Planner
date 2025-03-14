@@ -27,10 +27,8 @@ preferred_mode = st.multiselect("🚗 Preferred Mode of Transport:", ["🏍️ B
 
 def clean_markdown(text):
     """Remove markdown formatting like ** for bold"""
-    # Remove bold formatting
     text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
-    # Remove other markdown if needed
-    text = re.sub(r'\*(.*?)\*', r'\1', text)  # Remove italics
+    text = re.sub(r'\*(.*?)\*', r'\1', text)  
     return text
 
 def format_travel_option(option_text):
